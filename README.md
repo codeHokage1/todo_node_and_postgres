@@ -1,0 +1,2 @@
+# Todo API with PostgreSQL
+Understanding the incorporation of a Node project with a PostgreSQL database. This project is done in follow up wit the freeCodeCamp YouTube video on PERN stack ToDo application
