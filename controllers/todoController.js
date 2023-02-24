@@ -5,7 +5,7 @@ exports.getAllTodos = async (req, res) => {
         const todos = await todoPool.query("SELECT * FROM todo");
         res.send(todos.rows)
     } catch (error) {
-        console.log(error.message)
+        console.log(error)
         res.status(500).send(error.message)
     }
 };
@@ -71,7 +71,7 @@ exports.updateTodo = async (req, res) => {
 exports.deleteTodo = async (req, res) => {
     try {
         const { id } = req.params;
-        
+
         //find the todo
         const toDo = await todoPool.query(
             "SELECT * FROM todo WHERE todo_id = $1",
